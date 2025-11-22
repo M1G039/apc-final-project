@@ -1,6 +1,12 @@
 # Diabetes Risk Prediction - Machine Learning Project
 
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-orange.svg)](https://scikit-learn.org/)
+
 Final project for M.EEC006 Machine Learning course
+
+> **Quick Start**: See [QUICKSTART.md](QUICKSTART.md) for a 5-minute setup guide!
 
 ## Project Overview
 
