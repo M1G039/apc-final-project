@@ -1,9 +1,7 @@
 """
 Setup script for the Diabetes Risk Prediction project.
-
 This script helps users set up the project environment and download sample data.
 """
-
 import os
 import sys
 import subprocess
@@ -47,7 +45,6 @@ def check_directory_structure():
             print(f"  Created: {directory}")
         else:
             print(f"  ✓ {directory}")
-    
     return True
 
 
@@ -57,12 +54,18 @@ def print_next_steps():
     print("Setup Complete!")
     print("="*60)
     print("\nNext steps:")
-    print("1. Download the Pima Indians Diabetes Database from:")
-    print("   https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database")
-    print("\n2. Place the 'diabetes.csv' file in the 'data/raw/' directory")
+    print("1. Download the Diabetes Health Indicators Dataset from:")
+    print("   https://www.kaggle.com/datasets/mohankrishnathalla/diabetes-health-indicators-dataset")
+    print("\n2. Place the dataset file in the 'data/raw/' directory")
+    print("   Expected filename: 'diabetes_binary_health_indicators_BRFSS2015.csv'")
     print("\n3. Launch Jupyter Notebook:")
     print("   jupyter notebook")
     print("\n4. Open 'notebooks/01_data_exploration.ipynb' to get started")
+    print("\nDataset Information:")
+    print("- 253,680 survey responses from CDC BRFSS 2015")
+    print("- 21 predictor variables + 1 target variable")
+    print("- Balanced dataset (50-50 split)")
+    print("- Features include health conditions, lifestyle, and demographics")
     print("\nAlternatively, the notebooks will generate sample data if no")
     print("dataset is found, allowing you to explore the project structure.")
     print("="*60)

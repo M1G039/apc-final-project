@@ -96,3 +96,6 @@ results/*.png
 results/*.jpg
 results/*.csv
 !results/.gitkeep
+
+# Dataset
+data

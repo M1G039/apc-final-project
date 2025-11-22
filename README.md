@@ -24,12 +24,9 @@ This project explores various confidence estimation techniques for diabetes clas
 ```
 apc-final-project/
 ├── data/                          # Data directory
-│   ├── raw/                       # Raw data files
-│   └── processed/                 # Processed data files
 ├── notebooks/                     # Jupyter notebooks
 │   ├── 01_data_exploration.ipynb  # Data exploration and visualization
-│   ├── 02_binary_classification.ipynb  # Binary classification models
-│   └── 03_multiclass_classification.ipynb  # Multiclass classification models
+│   └── 02_binary_classification.ipynb  # Binary classification models
 ├── models/                        # Saved models
 ├── results/                       # Results and visualizations
 ├── requirements.txt               # Python dependencies
@@ -50,70 +47,76 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. Connect your venv kernel to Jupyter
+```bash
+python -m ipykernel install --user --name=your_env_name
+```
+
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Launch Jupyter Notebook:
+5. Launch Jupyter Notebook:
 ```bash
 jupyter notebook
 ```
 
-5. Navigate to the `notebooks/` directory and start with `01_data_exploration.ipynb`
+6. Navigate to the `notebooks/` directory and start with `01_data_exploration.ipynb`
 
 ## Dataset
+This project uses the **Diabetes Health Indicators Dataset** from the CDC's Behavioral Risk Factor Surveillance System (BRFSS) 2015.
 
-This project uses diabetes-related datasets. Common sources include:
-- **Pima Indians Diabetes Database** (UCI Machine Learning Repository)
-- **CDC Diabetes Health Indicators Dataset**
-- Or custom datasets with relevant features
+**Source:** [Kaggle - Diabetes Health Indicators Dataset](https://www.kaggle.com/datasets/mohankrishnathalla/diabetes-health-indicators-dataset/data)
 
-### Features typically include:
-- Glucose levels
-- Blood pressure
-- BMI (Body Mass Index)
-- Age
-- Insulin levels
-- Family history
-- And other relevant health indicators
+### Dataset Overview
+- Contains 253,680 survey responses from the cleaned BRFSS 2015 survey
+- Features 21 predictor variables and 1 target variable (Diabetes_binary)
+- The dataset is balanced with an equal 50-50 split of respondents with no diabetes versus those with prediabetes or diabetes
+- Target variable: **Diabetes_binary** (0 = no diabetes, 1 = prediabetes or diabetes)
 
-## Methodology
+### Features (21 variables)
+The dataset includes the following health and lifestyle indicators:
 
-### 1. Data Exploration
-- Statistical analysis of features
-- Visualization of distributions
-- Correlation analysis
-- Missing data handling
+**Health Conditions:**
+- `HighBP` - High blood pressure
+- `HighChol` - High cholesterol
+- `BMI` - Body Mass Index (only continuous variable)
+- `Stroke` - History of stroke
+- `HeartDiseaseorAttack` - Coronary heart disease or myocardial infarction
+- `GenHlth` - General health status (1-5 scale)
+- `PhysHlth` - Physical health (number of days in past 30 days)
+- `MentHlth` - Mental health (number of days in past 30 days)
+- `DiffWalk` - Difficulty walking or climbing stairs
 
-### 2. Binary Classification
-- Models: Logistic Regression, Random Forest, SVM, Neural Networks
-- Performance metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC
-- Confidence estimation techniques
+**Lifestyle & Behaviors:**
+- `Smoker` - Smoking status
+- `PhysActivity` - Physical activity in past 30 days
+- `Fruits` - Fruit consumption
+- `Veggies` - Vegetable consumption
+- `HvyAlcoholConsump` - Heavy alcohol consumption
 
-### 3. Multiclass Classification
-- Classification into diabetes stages (e.g., Normal, Pre-diabetes, Type 1, Type 2)
-- Multi-class performance metrics
-- Confidence estimation for multi-class predictions
+**Healthcare Access:**
+- `AnyHealthcare` - Has any healthcare coverage
+- `NoDocbcCost` - Unable to see doctor due to cost
+- `CholCheck` - Cholesterol check in past 5 years
 
-### 4. Confidence Estimation Techniques
-- Prediction probabilities
-- Bootstrap aggregating
-- Calibration techniques (Platt scaling, Isotonic regression)
-- Ensemble methods
-- Bayesian approaches (if applicable)
+**Demographics:**
+- `Sex` - Biological sex
+- `Age` - Age category (1-13 scale)
+- `Education` - Education level
+- `Income` - Income level
+
 
 ## Results
 
-Results will be documented in the notebooks and saved in the `results/` directory, including:
-- Model performance comparisons
-- Confidence interval visualizations
-- ROC curves and confusion matrices
-- Feature importance analysis
+Results will be documented in the notebooks and saved in the `results/` directory.
 
 ## Contributors
 
 - M1G039
+- MafaldaBarros
+- Kyunha
 
 ## License
 
