@@ -80,10 +80,12 @@ def main():
     if not check_directory_structure():
         return
     
-    response = input("\nWould you like to install dependencies? (y/n): ")
-    if response.lower() == 'y':
+    response = input("\nWould you like to install dependencies? (y/n): ").strip().lower()
+    if response in ['y', 'yes']:
         if not install_dependencies():
             return
+    else:
+        print("\nSkipping dependency installation.")
     
     print_next_steps()
 
