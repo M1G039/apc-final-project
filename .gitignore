@@ -79,8 +79,8 @@ venv.bak/
 .DS_Store
 
 # Data files (uncomment if you want to exclude data)
-# data/raw/*
-# data/processed/*
+data/raw/*
+data/processed/*
 # !data/raw/.gitkeep
 # !data/processed/.gitkeep
 
